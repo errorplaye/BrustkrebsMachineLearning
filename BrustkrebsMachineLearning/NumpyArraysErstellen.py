@@ -47,17 +47,17 @@ DataN = []
 
 class_names = ['gesund', 'krank']
 
-#i = 0
-#src = trainPos
-#for img in os.listdir(src):
-#    pic = cv2.imread(os.path.join(src,img))
-#    pic = cv2.cvtColor(pic,cv2.COLOR_BGR2RGB)
-#    pic = cv2.resize(pic,(50,50))
-#    DataP.append([pic])
-#    i += 1
-#    print(i)
-###zwischenspeichern 
-##np.save(r'C:\Users\erics\Downloads\Datasets\trainDataP',np.array(DataP))
+i = 0
+src = trainPos
+for img in os.listdir(src):
+    pic = cv2.imread(os.path.join(src,img))
+    pic = cv2.cvtColor(pic,cv2.COLOR_BGR2RGB)
+    pic = cv2.resize(pic,(50,50))
+    DataP.append([pic])
+    i += 1
+    print(i)
+##zwischenspeichern 
+#np.save(r'C:\Users\erics\Downloads\Datasets\trainDataP',np.array(DataP))
 
 i = 0
 print("done with first")
@@ -70,33 +70,36 @@ for img in os.listdir(src):
     i += 1
     print(i)
  
-#zwischenspeichern 
-np.save(r'C:\Users\erics\Downloads\Datasets\trainDataN',np.array(DataN))
-print("done with second")
+##zwischenspeichern 
+#np.save(r'C:\Users\erics\Downloads\Datasets\trainDataN',np.array(DataN))
+#print("done with second")
 
-##random combination
-#m = len(DataN)
-#n = len(DataP)
+#random combination
+#DataN = np.load(r'C:\Users\erics\Downloads\Datasets\trainDataN.npy', allow_pickle=True)
+#DataP = np.load(r'C:\Users\erics\Downloads\Datasets\trainDataP.npy', allow_pickle=True)
 
-#print(m)
-#print(n)
-#permutation = np.array([0]*m + [1]*n)
-#np.random.shuffle(permutation)
+m = len(DataN)
+n = len(DataP)
 
-#n = 0;
-#m = 0;
-#for i in permutation:
-#    print(m)
-#    if(i == 0):
-#        Data.append(DataN[m])
-#        m += 1
-#    else:
-#        Data.append(DataP[n])
-#        n += 1
+print(m)
+print(n)
+permutation = np.array([0]*m + [1]*n)
+np.random.shuffle(permutation)
 
-#np.save(r'C:\Users\erics\Downloads\Datasets\trainData',np.array(Data))
-#np.save(r'C:\Users\erics\Downloads\Datasets\trainLabel',np.array(permutation))
+n = 0;
+m = 0;
+for i in permutation:
+    print(m)
+    if(i == 0):
+        Data.append(DataN[m])
+        m += 1
+    else:
+        Data.append(DataP[n])
+        n += 1
 
-#print(len(Data))
-#print(len(permutation))
+np.save(r'C:\Users\erics\Downloads\Datasets\trainData',np.array(Data))
+np.save(r'C:\Users\erics\Downloads\Datasets\trainLabel',np.array(permutation))
+
+print(len(Data))
+print(len(permutation))
 

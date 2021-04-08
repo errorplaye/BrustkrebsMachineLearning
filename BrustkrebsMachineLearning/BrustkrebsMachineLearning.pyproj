@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>7bfbffbe-9a96-4330-873b-b7ff2dd79808</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>NumpyArraysErstellen.py</StartupFile>
+    <StartupFile>BrustkrebsMachineLearning.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
