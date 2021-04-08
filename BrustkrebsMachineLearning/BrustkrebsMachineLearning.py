@@ -18,23 +18,10 @@ import matplotlib.pyplot as plt
 #valPos = r'C:\Users\erics\Downloads\Datasets\validate\krank'
 #valNeg = r'C:\Users\erics\Downloads\Datasets\validate\gesund'           
 
-#trainingData = []
-#trainingLabel = []
-#class_names = ['gesund', 'krank']
-#for img in os.listdir(valPos):
-#    pic = cv2.imread(os.path.join(valPos,img))
-#    pic = cv2.cvtColor(pic,cv2.COLOR_BGR2RGB)
-#    pic = cv2.resize(pic,(50,50))
-#    trainingData.append([pic])
-#    trainingLabel.append([1])
+class_names = ['gesund', 'krank']
 
-#np.save(r'C:\Users\erics\Downloads\Datasets\features',np.array(trainingData))
-
-##print(trainingData)
-##print(trainingLabel)
-#print(len(trainingData))
-
-saved = np.load(r'C:\Users\erics\Downloads\Datasets\features.npy', allow_pickle=True)
+saved = np.load(r'C:\Users\erics\Downloads\Datasets\valData.npy', allow_pickle=True)
+label = np.load(r'C:\Users\erics\Downloads\Datasets\valLabel.npy', allow_pickle=True)
 print(len(saved))
 print(saved.shape)
 
@@ -48,5 +35,5 @@ for i in range(25):
     plt.yticks([])
     plt.grid(False)
     plt.imshow(saved[i].reshape(50,50,3), cmap=plt.cm.binary)
-    #plt.xlabel(class_names[saved[i]])
+    plt.xlabel(class_names[label[i]])
 plt.show()

@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>7bfbffbe-9a96-4330-873b-b7ff2dd79808</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>BrustkrebsMachineLearning.py</StartupFile>
+    <StartupFile>NumpyArraysErstellen.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -26,6 +26,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="KrebsdatenSortieren.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NumpyArraysErstellen.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
