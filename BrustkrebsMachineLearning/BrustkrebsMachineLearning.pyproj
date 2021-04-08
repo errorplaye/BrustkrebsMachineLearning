@@ -32,6 +32,17 @@
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Models\assets\" />
+    <Folder Include="Models\variables\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\keras_metadata.pb" />
+    <Content Include="Models\saved_model.pb" />
+    <Content Include="Models\variables\variables.data-00000-of-00001" />
+    <Content Include="Models\variables\variables.index" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
        Visual Studio and specify your pre- and post-build commands in
