@@ -34,14 +34,24 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
-    <Folder Include="Models\assets\" />
-    <Folder Include="Models\variables\" />
+    <Folder Include="Models\Model1\" />
+    <Folder Include="Models\Model1\assets\" />
+    <Folder Include="Models\Model1\variables\" />
+    <Folder Include="Models\Model2\" />
+    <Folder Include="Models\Model2\assets\" />
+    <Folder Include="Models\Model2\variables\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Models\keras_metadata.pb" />
-    <Content Include="Models\saved_model.pb" />
-    <Content Include="Models\variables\variables.data-00000-of-00001" />
-    <Content Include="Models\variables\variables.index" />
+    <Content Include="Models\Model1\keras_metadata.pb" />
+    <Content Include="Models\Model1\README.txt" />
+    <Content Include="Models\Model1\saved_model.pb" />
+    <Content Include="Models\Model1\variables\variables.data-00000-of-00001" />
+    <Content Include="Models\Model1\variables\variables.index" />
+    <Content Include="Models\Model2\keras_metadata.pb" />
+    <Content Include="Models\Model2\README.txt" />
+    <Content Include="Models\Model2\saved_model.pb" />
+    <Content Include="Models\Model2\variables\variables.data-00000-of-00001" />
+    <Content Include="Models\Model2\variables\variables.index" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
